@@ -25,9 +25,11 @@ with open(filename) as f:
             dates.append(date)
 
 plt.style.use('dark_background')
+
 fig, ax = plt.subplots()
 ax.plot(dates, highs, c='red')
 ax.plot(dates, lows, c='green')
+# autoformat the date on the x axis
 fig.autofmt_xdate()
 plt.title("Annual temperature, 2018", fontsize=24)
 plt.xlabel('dates', fontsize=16)
